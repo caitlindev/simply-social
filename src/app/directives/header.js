@@ -5,7 +5,6 @@ angular.module('ngSoloists.header', [])
 		restrict: "A",
 		templateUrl: 'directives/header.tpl.html',
 		link: function(scope, element, attrs) {
-			console.log("blah");
 
 			scope.items = [
 				{
@@ -27,9 +26,7 @@ angular.module('ngSoloists.header', [])
 				isopen: false
 			};
 
-			scope.toggleDropdown = function($event) {
-				$event.preventDefault();
-				$event.stopPropagation();
+			scope.toggleDropdown = function() {
 				scope.status.isopen = !scope.status.isopen;
 			};
 		}

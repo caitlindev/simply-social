@@ -63,7 +63,48 @@ form {
 	-moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+    min-width:100px;
     border:0;
+    padding:0;
+
+    li {
+    	border-bottom: solid 1px #dee1e5;
+    	height:30px;
+		overflow: hidden;
+    	&:first-child {
+    		border-top-right-radius: 3px;
+    		border-top-left-radius: 3px;
+    	}
+    	&:last-child {
+    		border:0;
+    		border-bottom-right-radius: 3px;
+    		border-bottom-left-radius: 3px;
+    	}
+    	a {
+    		font-size: 0.9em;
+    		line-height: 30px;
+    		padding: 0 20px;
+    		color:#70767f;
+    		&:hover {
+	    		background:#F9F9F9;
+	    		border-bottom:solid 1px #dee1e5;
+	    	}
+    	}
+    }
+    &:before {
+	    bottom: 100%;
+	    right: 18px;
+	    border: solid transparent;
+	    content: " ";
+	    height: 0;
+	    width: 0;
+	    position: absolute;
+	    pointer-events: none;
+	    border-color: rgba(136, 183, 213, 0);
+	    border-bottom-color: white;
+	    border-width: 5px;
+	    margin-left: -5px;
+    }
 }
 
 
