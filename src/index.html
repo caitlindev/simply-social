@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="ngSoloists" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <!-- social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@caiticoco">
+    <meta name="twitter:title" content="SimplySocial">
+    <meta name="twitter:description" content="SimplySocial">
+    <meta name="twitter:creator" content="@caiticoco">
+    <meta name="twitter:image:src" content="">
+    <meta property="og:title" content="SimplySocial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Select2 theme -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+
+
+
+  </head>
+  <body>
+
+    <div ui-view="main" id="main"></div>
+
+  </body>
+</html>
