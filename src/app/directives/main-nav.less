@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    NAVIGATION
+\*------------------------------------*/
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding:24px 0;
+    ul {
+        list-style-type: none;
+        padding:0;
+        margin:0;
+        li {
+            a {
+                font-family: 'proxima_nova_rgregular', sans-serif;
+                text-decoration: none;
+                font-weight: 700;
+                color: #bec3cc;
+                padding: 0 10px;
+                text-transform: uppercase;
+                font-size: 0.6em;
+                &:hover,
+                &:focus, 
+                &:active {
+                    outline:0;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    border-bottom: solid 4px @ssGreen;
+                    text-decoration: none;
+                    padding-bottom: 16px;
+                    color:white;
+                }
+            }
+            float: left;
+            padding: 0 20px;
+            letter-spacing: 2px;
+            &:first-child {
+                padding-left:0;
+            }
+        }
+    }
+}

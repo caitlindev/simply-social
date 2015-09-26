@@ -3,19 +3,6 @@
 
 
 
-@font-face {
-    font-family: 'proxima_nova_rgregular';
-    src: url('fonts/proxima_nova/proximanova-regular-webfont.eot');
-    src: url('fonts/proxima_nova/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/proxima_nova/proximanova-regular-webfont.woff2') format('woff2'),
-         url('fonts/proxima_nova/proximanova-regular-webfont.woff') format('woff'),
-         url('fonts/proxima_nova/proximanova-regular-webfont.ttf') format('truetype'),
-         url('fonts/proxima_nova/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 html {
     font-size:62.5%;
     height:100%;
@@ -32,6 +19,12 @@ body {
 	margin:0 auto;
 }
 
+.wrapper-container {
+    max-width: 575px;
+    margin:0 auto;
+    position:relative;
+}
+
 .pull-left {
 	float:left;
 }
@@ -44,16 +37,6 @@ body {
   clear:both;
 }
 
-form {
-	input.form-control {
-		background-color:transparent;
-		border:solid 1px #44474b;
-		height:30px;
-	}
-	.form-group {
-		margin:0;
-	}
-}
 
 
 /*------------------------------------*\
@@ -116,12 +99,49 @@ form {
 	border:0;
 	padding:0;
 	height:30px;
+
+    &:focus, 
+    &:active:focus, 
+    &.active:focus, 
+    &.focus, 
+    &:active.focus, 
+    &.active.focus {
+        outline:0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+
+
+/*------------------------------------*\
+    INPUT
+\*------------------------------------*/
+form {
+	input.form-control {
+		background-color:transparent;
+		border:0;
+		height:30px;
+		-webkit-box-shadow: none;
+        box-shadow: none;
+		&:focus {
+			border-color: @ssGreen;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 178, 134, 0.075), 0 0 4px rgba(0, 178, 134, 0.6);
+			box-shadow: inset 0 1px 1px rgba(0, 178, 134, 0.075), 0 0 4px rgba(0, 178, 134, 0.6);
+		}
+	}
+	.form-group {
+		margin:0;
+	}
 }
 
 
 
 
-
 @import '../app/home/home.less';
+@import '../app/directives/main-nav.less';
 @import '../app/directives/header.less';
+@import '../app/directives/hero.less';
 

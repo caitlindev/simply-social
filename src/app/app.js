@@ -7,6 +7,8 @@ angular.module( 'ngSoloists', [
   'templates-common',
   'ngSoloists.home',
   'ngSoloists.header',
+  'ngSoloists.hero',
+  'ngSoloists.mainNav',
   'ngSoloists.userService',
   'ui.calendar',
   'uiGmapgoogle-maps'

@@ -9,15 +9,13 @@ header {
         width: 138px;
         height: 25px;
         text-indent: -99999px;
-        background: url('logo.svg') 0 0 no-repeat;
-        background-size: 960px 560px;
+        .sprite(0, 0);
     }
 
     .right-container {
         margin-top:15px;
         .btn-comments {
-            background: url('logo.svg') 0 -35px no-repeat;
-            background-size: 960px 560px;
+            .sprite(0, -35px);
             width:31px;
             height:26px;
             float:left;
@@ -30,12 +28,17 @@ header {
             .btn-search {
                 width:16px;
                 height:16px;
-                background: url('logo.svg') 0 -70px no-repeat;
-                background-size: 960px 560px;
+                .sprite(0, -70px);
                 position: absolute;
                 top:50%;
                 right:8px;
                 margin-top:-8px;
+            }
+            input.form-control {
+                border:solid 1px #44474b;
+                &:focus {
+                    border-color: @ssGreen;
+                }
             }
         }
 
@@ -49,6 +52,7 @@ header {
             }
             &:hover .dropdown-menu {
                 display: block;
+                color:#70767f;
             }
             .avatar {
                 width: 30px;

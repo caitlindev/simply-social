@@ -1,9 +1,9 @@
-angular.module('ngSoloists.header', [])
+angular.module('ngSoloists.mainNav', [])
 
-.directive("ssHeader", function() {
+.directive("ssMainNav", function() {
 	return {
 		restrict: "A",
-		templateUrl: 'directives/header.tpl.html',
+		templateUrl: 'directives/main-nav.tpl.html',
 		link: function(scope, element, attrs) {
 
 			scope.items = [
