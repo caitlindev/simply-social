@@ -1,0 +1,21 @@
+<div class="create-post-container">
+	<div class="btn-close" ng-click="closeModal()"></div>
+	<p>Create new message</p>
+	<form name="form-create-post" class="form-create-post" novalidate>
+		<div class="form-group">
+			<input type="text" name="create-post" ng-model="query" class="form-control" />
+			<div class="pull-left">
+				<button class="btn btn-add-photo" type="button">
+			        <i class="icon-photo"></i>
+			        Add Photo
+			      </button>
+			      <button class="btn btn-add-video" type="button">
+			        <i class="icon-video"></i>
+			        Add Video
+			      </button>
+			</div>
+			<button class="pull-right btn btn-post" type="submit">Post</button>
+			<div class="clearfix"></div>
+		</div>
+	</form>
+</div>

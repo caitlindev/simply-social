@@ -13,17 +13,11 @@ angular.module( 'ngSoloists.home', [])
   });
 })
 
-.controller( 'HomeCtrl', function HomeController($scope, UserService) {
-  $scope.userServiceCall = {
-    success: function(data, status, headers, config) {
-      console.log(data);
-    },
-    error: function(data, status, headers, config) {
-      // console.log(status);
-    }
-  };
+.controller( 'HomeCtrl', function HomeController($scope) {
 
-  
+  //bound to the search file model in the header directive
+  $scope.searchQuery = null;
+
   $scope.postData = [
     {
       id:0,
@@ -92,7 +86,7 @@ angular.module( 'ngSoloists.home', [])
       firstName:"Vitor",
       lastName:"Leal",
       avatar:"assets/images/avatar_vitor_leal.jpg",
-      post:"You have to see this bike. It will make your daily commute a absolute joy ride! vimeo.com/p/mV0PUrHRwQ/",
+      post:"You have to see this bike. It will make your daily commute an absolute joy ride! vimeo.com/p/mV0PUrHRwQ/",
       createdOn: moment(moment().subtract(1, 'hours')).fromNow(),
       hasImage:false,
       postImage:null,
@@ -245,5 +239,26 @@ angular.module( 'ngSoloists.home', [])
       comments:[]
     }
   ];
-});
+})
 
+.filter('searchPosts', function () {
+  return function (posts, query) {
+    var filtered = [];
+    var i;
+    if (query!==null) {
+      var lcQuery = query.toLowerCase();
+      console.log(lcQuery);
+      for (i=0; i<posts.length; i++) {
+        var post = posts[i];
+        var postName = post.firstName.toLowerCase() + " " + post.lastName.toLowerCase();
+        if (postName.indexOf(lcQuery) > -1) {
+          filtered.push(post);
+        }
+      }
+    } else {
+      filtered = posts;
+    }
+    
+    return filtered;
+  };
+});

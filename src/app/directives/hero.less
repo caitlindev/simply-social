@@ -59,39 +59,41 @@
                 }
             }
         }
-        .btn-add-photo,
-        .btn-add-video {
-            color:rgba(255,255,255,0.5);
-            .tran(all, 300ms, linear, 0ms);
-            margin-top:15px;
-            &:hover {
-                color:white;
-                .tran(all, 300ms, linear, 0ms);
-                i {
-                    .opacity(1);
-                    .tran(all, 300ms, linear, 0ms);
-                }
-            }
-            i {
-                display: block;
-                float:left;
-                width:18px;
-                height:14px;
-                margin-right:10px;
-                .opacity(0.7);
-                .tran(all, 300ms, linear, 0ms);
-            }
+    }
+}
+
+
+.btn-add-photo,
+.btn-add-video {
+    color:rgba(255,255,255,0.5);
+    .tran(all, 200ms, linear, 0ms);
+    margin-top:15px;
+    &:hover {
+        color:white;
+        .tran(all, 200ms, linear, 0ms);
+        i {
+            .opacity(1);
+            .tran(all, 200ms, linear, 0ms);
         }
-        .btn-add-photo {
-            i {
-                .sprite(0, -97px);
-            }
-        }
-        .btn-add-video {
-            margin-left:50px;
-            i {
-                .sprite(0, -121px);
-            }
-        }
+    }
+    i {
+        display: block;
+        float:left;
+        width:18px;
+        height:14px;
+        margin-right:10px;
+        .opacity(0.7);
+        .tran(all, 200ms, linear, 0ms);
+    }
+}
+.btn-add-photo {
+    i {
+        .sprite(0, -97px);
+    }
+}
+.btn-add-video {
+    margin-left:50px;
+    i {
+        .sprite(0, -121px);
     }
 }

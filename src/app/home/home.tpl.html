@@ -1,9 +1,9 @@
-<div ss-header></div>
+<div ss-header search-query="searchQuery"></div>
 <div ss-hero></div>
 
 <div class="wrapper-container">
 	<ul class="list-container">
-		<li ng-repeat="post in postData" class="list-item">
+		<li ng-repeat="post in postData | searchPosts:searchQuery" class="list-item">
 			<div class="add-padding">
 				<div class="left">
 					<div class="avatar-crop">
@@ -66,9 +66,8 @@
 							<form name="form-search" class="form-reply" novalidate>
 								<div class="form-group">
 									<div class="margin-bottom-small">
-										<input type="text" name="search" ng-model="query" class="form-control" placeholder="Reply..." />
+										<input type="text" name="search" ng-model="reply" class="form-control" placeholder="Reply..." />
 									</div>
-									<button class="pull-right btn btn-search" type="submit"></button>
 								</div>
 							</form>
 						</div>

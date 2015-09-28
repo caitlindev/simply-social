@@ -1,8 +1,11 @@
 angular.module('ngSoloists.header', [])
 
-.directive("ssHeader", function() {
+.directive("ssHeader", function($modal) {
 	return {
 		restrict: "A",
+		scope: {
+			searchQuery: "="
+		},
 		templateUrl: 'directives/header.tpl.html',
 		link: function(scope, element, attrs) {
 
@@ -21,6 +24,19 @@ angular.module('ngSoloists.header', [])
 					url:"/settings"
 				}
 			];
+
+
+			scope.createPost = function() {
+				scope.modalInstance = $modal.open({
+					templateUrl: 'home/create-post.tpl.html',
+					controller: 'CreatePostCtrl',
+					resolve: {}
+				});
+
+				scope.modalInstance.result.then(function (data) {
+					// console.log('modal closed.');
+				});
+			};
 		}
 	};
 });

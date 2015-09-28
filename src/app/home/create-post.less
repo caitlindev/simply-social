@@ -1,0 +1,45 @@
+.create-post-container {
+	padding:25px;
+	color:#70767f;
+	font-size: 1.067em;
+	form {
+		input.form-control {
+			background-color: white;
+			border: solid 1px;
+			width: 525px;
+			height: 90px;
+			margin-top:20px;
+		}
+
+		.btn-add-photo,
+		.btn-add-video {
+			color:#3f454d;
+			.opacity(0.4);
+			i {
+				margin-top:2px;
+			}
+			&:hover {
+				.opacity(1);
+			}
+			&:active:focus, 
+			&:active.focus {
+				color:#3f454d;
+			}
+		}
+		.btn-add-photo i {
+			.sprite(-20px, -97px);
+		}
+		.btn-add-video i {
+			.sprite(-20px, -121px);
+		}
+
+		.btn-post {
+			background:@ssGreen;
+			padding:0 25px;
+			border-radius: 3px;
+			color:white;
+			font-size: 14px;
+			margin-top:15px;
+		}
+	}
+}

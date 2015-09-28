@@ -11,3 +11,5 @@ I wanted to show an example of some CSS bluring on the image, in the event that 
 I'm storing the brand colors and specs in variables. I like to use mixins for properties that have multiple selectors depending on which browser you're using.
 
 My only use of Bootstrap is for some of their directives already built for Angular. Otherwise, I'm writing my own markup.
+
+Demonstrating some 2-way binding and custom filtering between the search field within the ssHeader directive and HomeCtrl.

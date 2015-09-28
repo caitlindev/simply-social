@@ -99,27 +99,66 @@ a {
 }
 
 
+
+
+
+/*------------------------------------*\
+    MODAL
+\*------------------------------------*/
+.modal {
+    background:rgba(0,0,0,0.8);
+    .modal-dialog {
+        width:575px;
+        margin:100px auto;
+        border-radius: 3px;
+        background-color: #dee1e5;
+    }
+    .modal-content {
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 0;
+
+        .btn-close {
+            cursor: pointer;
+            position: absolute;
+            top: -23px;
+            right: -23px;
+            width: 22px;
+            height: 22px;
+            .sprite(0, -231px);
+        }
+    }
+}
+
+
+
+
+
 /*------------------------------------*\
     BUTTONS
 \*------------------------------------*/
-.btn {
+.btn,
+button {
 	background:none;
 	border:0;
 	padding:0;
 	height:30px;
     font-size: 0.933em;
 
+    &:active:focus,
+    &:active.focus,
+    &:active, 
+    &.active,
+    &:hover, 
     &:focus, 
-    &:active:focus, 
-    &.active:focus, 
-    &.focus, 
-    &:active.focus, 
-    &.active.focus {
+    &.focus {
         outline:0;
         -webkit-box-shadow: none;
         box-shadow: none;
         border-radius: 0;
         border: none;
+        color:white;
     }
 }
 
@@ -154,4 +193,5 @@ form {
 @import '../app/directives/main-nav.less';
 @import '../app/directives/header.less';
 @import '../app/directives/hero.less';
+@import '../app/home/create-post.less';
 

@@ -2,11 +2,12 @@
   <div class="wrapper">
     <h1 id="logo" class="pull-left" title="Simply Social">Simply Social</h1>
     <div class="pull-right right-container">
-      <button class="btn btn-comments" title="Post a Comment"></button>
+      <button class="btn btn-comments" ng-click="createPost()" title="Post a Comment"></button>
       <form name="form-search" class="form-search" novalidate>
         <div class="form-group">
           <div class="margin-bottom-small">
-            <input type="text" name="search" ng-model="query" class="form-control" />
+            <input type="text" name="search" placeholder="Search Names" ng-model="searchQuery" class="form-control" />
+            {{query}}
           </div>
           <button class="pull-right btn btn-search" type="submit"></button>
         </div>
