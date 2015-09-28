@@ -6,7 +6,7 @@ angular.module('ngSoloists.mainNav', [])
 		templateUrl: 'directives/main-nav.tpl.html',
 		link: function(scope, element, attrs) {
 
-			
+			document.getElementById('all').focus();
 		}
 	};
 });

@@ -1,4 +1,4 @@
-angular.module( 'ngSoloists.home', [])
+angular.module( 'ngSoloists.home', ['ngSanitize'])
 
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'home', {
@@ -74,7 +74,7 @@ angular.module( 'ngSoloists.home', [])
       firstName:"Liang",
       lastName:"Shi",
       avatar:"assets/images/avatar_liang_shi.jpg",
-      post:"How to get animations out of your head. http://bit.ly/1q7BngO Funny and useful.",
+      post:"How to get animations out of your head. bit.ly/1q7BngO Funny and useful.",
       createdOn: moment(moment().subtract(1, 'hours')).fromNow(),
       hasImage:false,
       postImage:null,
@@ -260,4 +260,15 @@ angular.module( 'ngSoloists.home', [])
     
     return filtered;
   };
+})
+
+
+
+.filter('url2link', function () {
+    var urlPattern = /(?:(?:http|https):\/\/)?([-a-zA-Z0-9.]{2,256}\.[a-z]{2,4})\b(?:\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+    return function (text) {
+        return text.replace(urlPattern, '<a target="_blank" href="http://' + '$&">$&</a>');
+    };
 });
+
+

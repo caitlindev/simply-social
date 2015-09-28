@@ -9,10 +9,7 @@ angular.module( 'ngSoloists', [
   'ngSoloists.header',
   'ngSoloists.hero',
   'ngSoloists.mainNav',
-  'ngSoloists.createPost',
-  'ngSoloists.userService',
-  'ui.calendar',
-  'uiGmapgoogle-maps'
+  'ngSoloists.createPost'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {

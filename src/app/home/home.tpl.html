@@ -17,8 +17,7 @@
 						<span class="time">{{post.createdOn}}</span>
 					</div>
 					<p class="name">{{post.firstName}} {{post.lastName}}</p>
-					<p class="post-txt">
-						{{post.post}}
+						<div class="url-to-link" ng-bind-html="post.post | url2link"></div>
 					</p>
 				</div>
 			</div>

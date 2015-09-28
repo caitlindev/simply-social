@@ -34,19 +34,10 @@ module.exports = {
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-ui-select/dist/select.min.js',
       'vendor/angular-ui-utils/ui-utils.min.js',
-      'vendor/angular-ui-calendar/src/calendar.js',
-      'vendor/fullcalendar/fullcalendar.js',
-      'vendor/fullcalendar/gcal.js',
-      'vendor/ngInfiniteScroll/build/ng-infinite-scroll.min.js',
-      'vendor/jquery-scrollstop-master/jquery.scrollstop.min.js',
-      'vendor/angular-google-maps/dist/angular-google-maps.min.js',
-      'vendor/lodash/dist/lodash.min.js'
-
+      'vendor/lodash/dist/lodash.min.js',
+      'vendor/angular-sanitize/angular-sanitize.min.js'
     ],
-    css: [
-      'vendor/angular-ui-select/dist/select.min.css',
-      'vendor/fullcalendar/fullcalendar.css'
-    ],
+    css: [],
     assets: [
     ]
   },
