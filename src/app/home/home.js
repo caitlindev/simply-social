@@ -247,7 +247,6 @@ angular.module( 'ngSoloists.home', [])
     var i;
     if (query!==null) {
       var lcQuery = query.toLowerCase();
-      console.log(lcQuery);
       for (i=0; i<posts.length; i++) {
         var post = posts[i];
         var postName = post.firstName.toLowerCase() + " " + post.lastName.toLowerCase();
