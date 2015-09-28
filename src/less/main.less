@@ -6,10 +6,9 @@
 html {
     font-size:62.5%;
     height:100%;
-    background: #f3f1eb;
 }
 body {
-    font:15pt/1.4em 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+    font:15px/1.4em 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
     color:#444;
     font-weight: normal !important;
 }
@@ -21,6 +20,7 @@ body {
 
 .wrapper-container {
     max-width: 575px;
+    width:100%;
     margin:0 auto;
     position:relative;
 }
@@ -35,6 +35,14 @@ body {
 
 .clearfix {
   clear:both;
+}
+
+a {
+    text-decoration: none;
+    cursor:pointer;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 
@@ -99,6 +107,7 @@ body {
 	border:0;
 	padding:0;
 	height:30px;
+    font-size: 0.933em;
 
     &:focus, 
     &:active:focus, 
@@ -123,6 +132,7 @@ form {
 	input.form-control {
 		background-color:transparent;
 		border:0;
+        color:white;
 		height:30px;
 		-webkit-box-shadow: none;
         box-shadow: none;

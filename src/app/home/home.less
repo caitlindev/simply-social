@@ -1,0 +1,150 @@
+ul.list-container {
+	padding:0;
+	list-style-type: none;
+	margin:50px 0;
+	> li {
+		border-radius: 5px;
+		border: solid 1px #dee1e5;
+		// padding:25px;
+		padding:0;
+		margin-bottom:25px;
+		.add-padding {
+			padding:25px;
+		}
+		.left {
+			margin-right:18px;
+			width:40px;
+			height:40px;
+			float:left;
+			.avatar-crop {
+				width:40px;
+				height: 40px;
+				background:#ddd;
+				border-radius: 3px;
+				overflow: hidden;
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+		}
+		.right {
+			padding-left:58px;
+			p.name {
+				color:#3f454d;
+				font-size: 1.067em;
+				line-height: 1.200em;
+			}
+			p.post-txt {
+				font-size: 1em;
+				color:#70767f;
+				margin:0;
+				a {
+					color:#bec3cc;
+				}
+			}
+			.post-actions {
+				float: right;
+				position: relative;
+				span {
+					display: inline-block;
+					text-align: right;
+					margin-left:15px;
+					&.time {
+						font-size: 14px;
+						color:#bec3cc;
+						top: -2px;
+						position: relative;
+					}
+				}
+				.icon-reply {
+					width:13px;
+					height:13px;
+					.sprite(0,-186px);
+				}
+				.icon-like {
+					width:13px;
+					height:13px;
+					.sprite(0,-209px);
+				}
+			}
+		}
+
+		.post-media-crop {
+			overflow: hidden;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			position: relative;
+			height:315px;
+			img {
+				width:100%;
+				height:auto;
+				position: absolute;
+				bottom:0;
+			}
+		}
+		.comment-action-container {
+			margin:0;
+			.action {
+				color:#bec3cc;
+				font-size: 0.800em;
+				display: block;
+				padding: 0 25px 25px;
+				i {
+					font-size: 0.8em;
+					padding-left: 5px;
+				}
+				&:hover {
+			        color:#70767f;
+				}
+			}
+		}
+	}
+}
+
+ul.comment-container {
+	list-style-type: none;
+	margin:0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top: solid 1px #dee1e5;
+	padding:0;
+	> li {
+		// padding: 25px 25px 27px;
+		padding:0;
+		border-bottom: solid 1px #dee1e5;
+		background:#f9fafb;
+		.left {
+			margin-right:18px;
+			width:40px;
+			height:40px;
+			float:left;
+			.avatar-crop {
+				width:40px;
+				height: 40px;
+				background:#ddd;
+				border-radius: 3px;
+				overflow: hidden;
+			}
+		}
+		&:last-child {
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border:0;
+
+			form {
+				input {
+					background-color: white;
+					color:#70767f;
+					height: 40px;
+					line-height: 40px;
+					border-radius: 5px;
+					border: solid 1px #dee1e5;
+				}
+			}
+		}
+	}
+}
+
+
+
