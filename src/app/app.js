@@ -1,6 +1,5 @@
 angular.module( 'ngSoloists', [
   'ui.utils',
-  'ui.select',
   'ui.router',
   'ui.bootstrap',
   'templates-app',
@@ -9,7 +8,9 @@ angular.module( 'ngSoloists', [
   'ngSoloists.header',
   'ngSoloists.hero',
   'ngSoloists.mainNav',
-  'ngSoloists.createPost'
+  'ngSoloists.createPost',
+  'ngSoloists.userService',
+  'wu.masonry'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {

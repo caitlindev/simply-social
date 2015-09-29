@@ -1,17 +1,17 @@
 <nav>
   <div class="wrapper">
     <ul class="pull-left">
-      <li><a href="" id="all">All Posts</a></li>
-      <li><a href="" id="photos">Photos</a></li>
-      <li><a href="" id="videos">Videos</a></li>
+      <li><a href="" id="all" ng-click="changeContentSelection('all')">All Posts</a></li>
+      <li><a href="" id="photos" ng-click="changeContentSelection('photos')">Photos</a></li>
+      <li><a href="" id="videos" ng-click="changeContentSelection('videos')">Videos</a></li>
     </ul>
 
     <div class="sort-btns-container">
       <a href="">
-        <i class="icon-list"></i>
+        <i class="icon-list" ng-click="changeFormatSelection('list')"></i>
       </a>
       <a href="">
-        <i class="icon-grid"></i>
+        <i class="icon-grid" ng-click="changeFormatSelection('grid')"></i>
       </a>
     </div>
   </div>

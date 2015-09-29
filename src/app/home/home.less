@@ -2,7 +2,8 @@ ul.list-container {
 	padding:0;
 	list-style-type: none;
 	margin:50px 0;
-	> li {
+
+	li.list-item {
 		border-radius: 5px;
 		border: solid 1px #dee1e5;
 		// padding:25px;
@@ -35,7 +36,7 @@ ul.list-container {
 				font-size: 1.067em;
 				line-height: 1.200em;
 			}
-			p.post-txt {
+			.url-to-link {
 				font-size: 1em;
 				color:#70767f;
 				margin:0;
@@ -144,6 +145,27 @@ ul.comment-container {
 					border: solid 1px #dee1e5;
 				}
 			}
+		}
+	}
+}
+
+
+ul.list-container.grid-view {
+	width:100%;
+	max-width:1175px;
+	margin:50px auto;
+	li.list-item {
+		width:31%;
+		margin:1%;
+		.post-media-crop {
+			height:auto;
+			border-radius: 0;
+			img {
+				position: relative;
+			}
+		}
+		.post-actions {
+			margin-bottom:20px;
 		}
 	}
 }

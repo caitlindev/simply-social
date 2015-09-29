@@ -26,16 +26,19 @@ module.exports = {
   vendor_files: {
     js: [
       'vendor/jquery/jquery.js',
+      'vendor/masonry/dist/masonry.pkgd.js',
+      'vendor/imagesloaded/imagesloaded.pkgd.js',
+      'vendor/jquery-bridget/jquery.bridget.js',
       'vendor/jquery-ui/ui/jquery-ui.js',
       'vendor/moment/min/moment.min.js',
       'vendor/angular/angular.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
-      'vendor/angular-ui-select/dist/select.min.js',
       'vendor/angular-ui-utils/ui-utils.min.js',
       'vendor/lodash/dist/lodash.min.js',
-      'vendor/angular-sanitize/angular-sanitize.min.js'
+      'vendor/angular-sanitize/angular-sanitize.min.js',
+      'vendor/angular-masonry/angular-masonry.js'
     ],
     css: [],
     assets: [

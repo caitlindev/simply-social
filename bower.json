@@ -8,10 +8,12 @@
     "angular-bootstrap": "latest",
     "angular-ui-utils": "latest",
     "angular-ui-router": "latest",
-    "angular-ui-select": "latest",
     "angular-sanitize": "latest"
   },
   "dependencies": {
     "moment": "~2.9.0"
+  },
+  "resolutions": {
+    "angular": ">= 1.0.5"
   }
 }

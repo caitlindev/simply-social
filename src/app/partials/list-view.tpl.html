@@ -1,0 +1,75 @@
+<div class="wrapper-container">
+	<ul class="list-container">
+		<li ng-repeat="post in postData | searchPosts:searchQuery | filterContent:selection.content" class="list-item">
+			<div class="add-padding">
+				<div class="left">
+					<div class="avatar-crop">
+						<img src="{{post.avatar}}"/>
+					</div>
+				</div>
+				<div class="right">
+					<div class="post-actions">
+						<span class="icon-reply"></span>
+						<span class="icon-like"></span>
+						<span class="time">{{post.createdOn}}</span>
+					</div>
+					<p class="name">{{post.firstName}} {{post.lastName}}</p>
+						<div class="url-to-link" ng-bind-html="post.post | url2link"></div>
+					</p>
+				</div>
+			</div>
+			<div ng-if="post.hasImage" class="post-media-crop">
+				<img src="{{post.postImage}}"/>
+			</div>
+			<div ng-if="post.hasVideo" class="post-media-crop">
+				<img src="{{post.postVideo}}"/>
+			</div>
+			
+			<div class="clearfix"></div>
+
+			<div ng-if="post.comments" class="comment-action-container">
+				<div class="right">
+					<a class="action action-expand" ng-init="isCollapsed=true" ng-click="isCollapsed = !isCollapsed">
+						<span ng-if="isCollapsed">Expand<i class="fa fa-caret-down"></i></span>
+						<span ng-if="!isCollapsed">Collapse<i class="fa fa-caret-up"></i></span>
+					</a>
+				</div>
+
+				<ul collapse="isCollapsed" class="comment-container">
+					<li ng-repeat="comment in post.comments">
+						<div class="add-padding">
+							<div class="left">
+								<div class="avatar-crop">
+									<img src="{{comment.avatar}}"/>
+								</div>
+							</div>
+							<div class="right">
+								<div class="post-actions">
+									<span class="icon-reply"></span>
+									<span class="icon-like"></span>
+									<span class="time">{{comment.createdOn}}</span>
+								</div>
+								<p class="name">{{comment.firstName}} {{comment.lastName}}</p>
+								<p class="post-txt">
+									{{comment.post}}
+								</p>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</li>
+					<li>
+						<div class="add-padding">
+							<form name="form-search" class="form-reply" novalidate>
+								<div class="form-group">
+									<div class="margin-bottom-small">
+										<input type="text" name="search" ng-model="reply" class="form-control" placeholder="Reply..." />
+									</div>
+								</div>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>

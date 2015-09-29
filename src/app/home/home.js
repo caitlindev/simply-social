@@ -18,6 +18,12 @@ angular.module( 'ngSoloists.home', ['ngSanitize'])
   //bound to the search file model in the header directive
   $scope.searchQuery = null;
 
+  //selection is bound to the main-nav module
+  $scope.selection = {
+    content:'all',
+    format:'list'
+  };
+
   $scope.postData = [
     {
       id:0,
@@ -112,10 +118,10 @@ angular.module( 'ngSoloists.home', ['ngSanitize'])
       avatar:"assets/images/avatar_jenny_shen.jpg",
       post:"Perfect day to be outside taking pictures instagram.com/p/mV0PUrHRwQ/",
       createdOn: moment(moment().subtract(25, 'minutes')).fromNow(),
-      hasImage:false,
-      postImage:null,
-      hasVideo:true,
-      postVideo:"assets/images/img_jenny_shen.jpg",
+      hasImage:true,
+      postImage:"assets/images/img_jenny_shen.jpg",
+      hasVideo:false,
+      postVideo:null,
       comments:[]
     },{
       id:7,
@@ -241,6 +247,10 @@ angular.module( 'ngSoloists.home', ['ngSanitize'])
   ];
 })
 
+
+
+
+
 .filter('searchPosts', function () {
   return function (posts, query) {
     var filtered = [];
@@ -261,6 +271,36 @@ angular.module( 'ngSoloists.home', ['ngSanitize'])
     return filtered;
   };
 })
+
+
+
+
+.filter('filterContent', function () {
+  return function (posts, query) {
+    var filtered = [];
+    
+    if (query!==null) {
+      for (var i=0; i<posts.length; i++) {
+        var post = posts[i];
+        if (query==='photos') {
+          if (post.hasImage===true) {
+            filtered.push(post);
+          }
+        } else if (query==='videos') {
+          post = posts[i];
+          if (post.hasVideo===true) {
+            filtered.push(post);
+          }
+        } else {
+          filtered = posts;
+        }
+      }
+    }
+    
+    return filtered;
+  };
+})
+
 
 
 
