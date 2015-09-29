@@ -6,6 +6,7 @@ angular.module( 'ngSoloists', [
   'templates-common',
   'ngSoloists.home',
   'ngSoloists.header',
+  'ngSoloists.footer',
   'ngSoloists.hero',
   'ngSoloists.mainNav',
   'ngSoloists.createPost',

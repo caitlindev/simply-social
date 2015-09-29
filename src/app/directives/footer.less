@@ -1,84 +1,28 @@
-header {
-    position: fixed;
-    top:0;
-    width:100%;
-    height:60px;
-    background-color:#262728;
-    color:#70767f;
-    z-index: 100;
-    // overflow: hidden;
-    h1#logo {
-        margin: 20px 0 0 20px;
-        font-size: 1.2em;
-        width: 138px;
-        height: 25px;
-        text-indent: -99999px;
-        .sprite(0, 0);
-    }
-
-    .right-container {
-        margin-top:15px;
-        .btn-comments {
-            .sprite(0, -35px);
-            width:31px;
-            height:26px;
-            float:left;
-            margin:3px 25px 0 0;
-        }
-
-        form {
-            float:left;
-            position:relative;
-            .btn-search {
-                width:16px;
-                height:16px;
-                .sprite(0, -70px);
-                position: absolute;
-                top:50%;
-                right:8px;
-                margin-top:-8px;
-            }
-            input.form-control {
-                border:solid 1px #44474b;
-                &:focus {
-                    border-color: @ssGreen;
+footer {
+    ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border-top:solid 1px #dee1e5;
+        li {
+            margin:0;
+            padding: 0;
+            display: inline;
+            font-size: 0.733em;
+            text-transform: uppercase;
+            margin:0 12px;
+            height:50px;
+            font-family: 'proxima_novasemibold', sans-serif;
+            color:#70767f;
+            a {
+                color:@ssGreen;
+                line-height: 50px;
+                &:hover {
+                    color:@ssGreenHover;
+                    .opacity(0.6);
                 }
-            }
-        }
-
-        .btn-profile {
-            float:left;
-            cursor:pointer;
-            position: relative;
-            .dropdown-menu {
-                right: 0;
-                left:auto;
-            }
-            &:hover .dropdown-menu {
-                display: block;
-                color:#70767f;
-            }
-            .avatar {
-                width: 30px;
-                height: 30px;
-                float: left;
-                margin: 0 10px 0 20px;
-                background-color: #63656a;
-                border-radius: 3px;
-                overflow: hidden;
-                img {
-                    width:100%;
-                    height:auto;
-                }
-            }
-            i {
-                float: right;
-                line-height: 30px;
-                font-size: 0.8em;
-                margin: 0 20px 0 0;
-                color:#63656a;
             }
         }
     }
 }
-

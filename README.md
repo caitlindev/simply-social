@@ -1,3 +1,5 @@
+Started with an Angular boilerplate skeleton.
+
 Broke each section down into directives.
 
 Used fontsquirrel to convert the font to web formats.
