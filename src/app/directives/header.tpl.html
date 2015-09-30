@@ -20,7 +20,7 @@
         <i class="fa fa-caret-down"></i>
         <ul class="dropdown-menu" aria-labelledby="simple-dropdown">
           <li ng-repeat="choice in items">
-            <a href="{{choice.url}}">{{choice.title}}</a>
+            <a ui-sref="{{choice.title.toLowerCase()}}">{{choice.title}}</a>
           </li>
         </ul>
      

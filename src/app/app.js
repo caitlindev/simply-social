@@ -4,6 +4,7 @@ angular.module( 'ngSoloists', [
   'ui.bootstrap',
   'templates-app',
   'templates-common',
+  'ngSoloists.settings',
   'ngSoloists.home',
   'ngSoloists.header',
   'ngSoloists.footer',

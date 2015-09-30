@@ -1,0 +1,109 @@
+.settings {
+	margin-top:60px;
+	padding:100px 0;
+	.left {
+		float: left;
+		width:20%;
+		.avatar-crop {
+			margin:25px 25px 10px 0;
+			width: 85px;
+			height: 85px;
+			background-color: gray;
+			overflow: hidden;
+			 border-radius: 3px;
+			 overflow: hidden;
+			 img {
+			 	background:gray;
+			 }
+		}
+		button {
+			color: #bec3cc;
+			border: solid 1px #bec3cc;
+			padding: 0;
+			margin: 0;
+			width: 85px;
+		}
+	}
+
+	.right {
+		float:right;
+		width:80%;
+		padding:25px;
+		.inputs {
+			width: 100%;
+			position: relative;
+			&:hover {
+				span.change {
+					display: inline;
+				}
+			}
+			span.save {
+				display: none;
+				color:@ssGreen;
+				position: absolute;
+				text-align: right;
+				top:0;
+				right:15px;
+				line-height: 38px;
+				font-size:0.800em;
+				cursor: pointer;
+				background-color: white;
+				margin-top:1px;
+				z-index: 10;
+				width:42px;
+			}
+			span.change {
+				display: none;
+				color:#bec3cc;
+				position: absolute;
+				top:0;
+				right:15px;
+				line-height: 40px;
+				font-size:0.800em;
+				text-align: right;
+				pointer-events: none;
+			}
+			input {
+				border:solid 1px #bec3cc;
+				margin:0 0 25px;
+				height:40px;
+				line-height: 40px;
+				text-indent: 25px;
+				.sprite(7px,-262px);
+				font-size: 1.067em;
+				color:#3f454d;
+				&:focus + span.save {
+					display: inline;
+				}
+			}
+			&.name {
+				input {
+					background-position: 7px -262px;
+					&:focus {
+						border:solid 1px @ssGreen !important;
+						background-position: 7px -369px !important;
+					}
+				}
+			}
+			&.email {
+				input {
+					background-position: 7px -296px;
+					&:focus {
+						border:solid 1px @ssGreen !important;
+						background-position: 7px -403px !important;
+					}
+				}
+			}
+			&.password,
+			&.password2 {
+				input {
+					background-position: 7px -333px;
+					&:focus {
+						border:solid 1px @ssGreen !important;
+						background-position: 7px -440px !important;
+					}
+				}
+			}
+		}
+	}
+}

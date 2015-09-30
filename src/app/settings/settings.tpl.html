@@ -1,0 +1,42 @@
+<div ss-header search-query="searchQuery"></div>
+
+<div class="wrapper-container settings">
+	<h2>Settings</h2>
+	<div class="left">
+		<div class="avatar-crop">
+			<img src="{{post.avatar}}"/>
+		</div>
+		<button class="btn btn-change-avatar" type="button">
+			Change
+		</button>
+	</div>
+	<div class="right">
+		<form name="form-settings-account" class="form-settings-account" ng-model="accountSettings" novalidate>
+			<div class="form-group">
+				<div class="inputs name">
+					<input name="account-settings" ng-model="accountSettings.name" placeholder="Name" class="form-control"/>
+					<span class="save">Save</span>
+					<span class="change">Change</span>
+				</div>
+				<div class="inputs email">
+					<input name="account-settings" ng-model="accountSettings.email" placeholder="Email" class="form-control"/>
+					<span class="save">Save</span>
+					<span class="change">Change</span>
+				</div>
+				<div class="inputs password">
+					<input name="account-settings" ng-model="accountSettings.password" placeholder="Password" class="form-control"/>
+					<span class="save">Save</span>
+					<span class="change">Change</span>
+				</div>
+				<div class="inputs password2">
+					<input name="account-settings" ng-model="accountSettings.password2" placeholder="ConfirmPassword" class="form-control"/>
+					<span class="save">Save</span>
+					<span class="change">Change</span>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div ss-footer></div>
