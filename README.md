@@ -15,3 +15,5 @@ I'm storing the brand colors and specs in variables. I like to use mixins for pr
 My only use of Bootstrap is for some of their directives already built for Angular. Otherwise, I'm writing my own markup.
 
 Demonstrating some 2-way binding and custom filtering between the search field within the ssHeader directive and HomeCtrl.
+
+Example of form validation on the Settings page.

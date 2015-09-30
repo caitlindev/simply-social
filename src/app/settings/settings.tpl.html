@@ -2,41 +2,127 @@
 
 <div class="wrapper-container settings">
 	<h2>Settings</h2>
-	<div class="left">
-		<div class="avatar-crop">
-			<img src="{{post.avatar}}"/>
-		</div>
-		<button class="btn btn-change-avatar" type="button">
-			Change
-		</button>
-	</div>
-	<div class="right">
-		<form name="form-settings-account" class="form-settings-account" ng-model="accountSettings" novalidate>
-			<div class="form-group">
-				<div class="inputs name">
-					<input name="account-settings" ng-model="accountSettings.name" placeholder="Name" class="form-control"/>
-					<span class="save">Save</span>
-					<span class="change">Change</span>
+	<form name="formSettings" class="form-settings-account" ng-model="accountSettings">
+		<div class="form-section account">
+			<h3>Account</h3>
+			<div class="left">
+				<div class="avatar-crop">
+					<img src="{{accountSettings.avatar}}"/>
 				</div>
-				<div class="inputs email">
-					<input name="account-settings" ng-model="accountSettings.email" placeholder="Email" class="form-control"/>
-					<span class="save">Save</span>
-					<span class="change">Change</span>
-				</div>
-				<div class="inputs password">
-					<input name="account-settings" ng-model="accountSettings.password" placeholder="Password" class="form-control"/>
-					<span class="save">Save</span>
-					<span class="change">Change</span>
-				</div>
-				<div class="inputs password2">
-					<input name="account-settings" ng-model="accountSettings.password2" placeholder="ConfirmPassword" class="form-control"/>
-					<span class="save">Save</span>
-					<span class="change">Change</span>
+				<button class="btn btn-change-avatar" type="button">
+					Change
+				</button>
+			</div>
+			<div class="right">
+				<div class="form-group">
+					<div class="inputs name">
+						<input name="settingsName" ng-model="accountSettings.name" placeholder="Name" class="form-control" required ng-class="{'red': formSettings.settingsName.$error.required}"/>
+						<span class="save">Save</span>
+						<span class="change">Change</span>
+					</div>
+					<div class="inputs email">
+						<input type="email" name="settingsEmail" ng-model="accountSettings.email" placeholder="Email" class="form-control" required ng-class="{'red': formSettings.settingsEmail.$error.required || formSettings.settingsEmail.$error.email}"/>
+						<span class="save">Save</span>
+						<span class="change">Change</span>
+					</div>
+					<div class="inputs password">
+						<input type="password" name="settingsPassword" ng-model="accountSettings.password" placeholder="Password" class="form-control" ng-minlength="8" required ng-class="{'red': formSettings.settingsPassword.$error.required || formSettings.settingsPassword.$error.minlength}"/>
+						<span class="save">Save</span>
+						<span class="change">Change</span>
+					</div>
 				</div>
 			</div>
-		</form>
-	</div>
-	<div class="clearfix"></div>
+			<div class="clearfix"></div>
+		</div>
+		
+
+
+		<div class="clearfix"></div>
+		
+
+
+		<div class="form-section notifications">
+			<h3>Account</h3>
+			<div class="form-group" ng-click="changeStatus('favorites')">
+				<div class="toggle-container">
+					<i class="active" ng-if="accountSettings.notifications.favorites"></i>
+					<i class="inactive" ng-if="!accountSettings.notifications.favorites"></i>
+				</div>
+				<p>email me when my posts are marked as favorites</p>
+			</div>
+			<div class="form-group" ng-click="changeStatus('mentioned')">
+				<div class="toggle-container">
+					<i class="active" ng-if="accountSettings.notifications.mentioned"></i>
+					<i class="inactive" ng-if="!accountSettings.notifications.mentioned"></i>
+				</div>
+				<p>email me when I’m mentioned</p>
+			</div>
+			<div class="form-group" ng-click="changeStatus('reply')">
+				<div class="toggle-container">
+					<i class="active" ng-if="accountSettings.notifications.reply"></i>
+					<i class="inactive" ng-if="!accountSettings.notifications.reply"></i>
+				</div>
+				<p>email me when I get a reply</p>
+			</div>
+			<div class="form-group" ng-click="changeStatus('follow')">
+				<div class="toggle-container">
+					<i class="active" ng-if="accountSettings.notifications.follow"></i>
+					<i class="inactive" ng-if="!accountSettings.notifications.follow"></i>
+				</div>
+				<p>email me when someone follows me</p>
+			</div>
+		</div>
+
+
+
+		<div class="clearfix"></div>
+		
+
+
+		<div class="form-section privacy">
+			<h3>Privacy</h3>
+			<div class="form-group">
+				<div class="radio-row">
+					<input type="radio" name="privacy" id="public" ng-model="accountSettings.privacy.tag" value="public">
+			        <label for="public"><span></span>allow anyone to tag me</label>
+				</div>
+				<div class="radio-row">
+					<input type="radio" name="privacy" id="protected" ng-model="accountSettings.privacy.tag" value="protected">
+			        <label for="protected"><span></span>only allow people I follow to tag me</label>
+				</div>
+				<div class="radio-row">
+					<input type="radio" name="privacy" id="private" ng-model="accountSettings.privacy.tag" value="private">
+			        <label for="private"><span></span>don’t allow anyone to tag me</label>
+				</div>
+			</div>
+
+
+			<div class="form-group margin-top">
+				<div class="checkbox-row">
+					<input type="checkbox" name="addLocation" id="addLocation" ng-model="accountSettings.privacy.addLocation" value="addLocation">
+			        <label for="addLocation"><span></span>add a location to my posts</label>
+				</div>
+
+				<div class="checkbox-row">
+					<input type="checkbox" name="findByEmail" id="findByEmail" ng-model="accountSettings.privacy.findByEmail" value="findByEmail">
+			        <label for="findByEmail"><span></span>let others find me by my email address</label>
+				</div>
+
+				<div class="checkbox-row">
+					<input type="checkbox" name="tailorAds" id="tailorAds" ng-model="accountSettings.privacy.tailorAds" value="tailorAds">
+			        <label for="tailorAds"><span></span>tailor ads based on my information</label>
+				</div>
+			</div>
+		</div>
+
+
+		<button class="btn btn-submit margin-top" type="submit">Save Changes</button>
+	</form>
+
+	
+
+
+
 </div>
 
 <div ss-footer></div>
