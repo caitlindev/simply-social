@@ -12,7 +12,8 @@ angular.module( 'ngSoloists', [
   'ngSoloists.mainNav',
   'ngSoloists.createPost',
   'ngSoloists.userService',
-  'wu.masonry'
+  'wu.masonry',
+  'ng.shims.placeholder'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {

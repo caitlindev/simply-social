@@ -38,7 +38,8 @@ module.exports = {
       'vendor/angular-ui-utils/ui-utils.min.js',
       'vendor/lodash/dist/lodash.min.js',
       'vendor/angular-sanitize/angular-sanitize.min.js',
-      'vendor/angular-masonry/angular-masonry.js'
+      'vendor/angular-masonry/angular-masonry.js',
+      'vendor/angular-shims-placeholder/dist/angular-shims-placeholder.min.js'
     ],
     css: [],
     assets: [
