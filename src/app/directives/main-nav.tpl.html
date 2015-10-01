@@ -1,9 +1,9 @@
 <nav>
   <div class="wrapper">
     <ul class="pull-left">
-      <li><a href="" id="all" ng-click="changeContentSelection('all')">All Posts</a></li>
-      <li><a href="" id="photos" ng-click="changeContentSelection('photos')">Photos</a></li>
-      <li><a href="" id="videos" ng-click="changeContentSelection('videos')">Videos</a></li>
+      <li><a href="" id="all" ng-click="changeContentSelection('all')" ng-class="{'active':selection.content==='all'}">All Posts</a></li>
+      <li><a href="" id="photos" ng-click="changeContentSelection('photos')" ng-class="{'active':selection.content==='photos'}">Photos</a></li>
+      <li><a href="" id="videos" ng-click="changeContentSelection('videos')" ng-class="{'active':selection.content==='videos'}">Videos</a></li>
     </ul>
 
     <div class="sort-btns-container">
