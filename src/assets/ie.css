@@ -94,3 +94,34 @@ ul.list-container li.list-item .right .post-actions .icon-like {
 
 
 
+
+
+
+
+
+
+.settings .form-section.account .right .inputs input {
+  background: url('logo.png') 7px -262px no-repeat;
+  background-size: 960px 560px;
+}
+
+.settings .form-section.account .right .inputs.name input {
+  background-position: 7px -262px;
+}
+.settings .form-section.account .right .inputs.name input:focus {
+  background-position: 7px -369px;
+}
+.settings .form-section.account .right .inputs.email input {
+  background-position: 7px -296px;
+}
+.settings .form-section.account .right .inputs.email input:focus {
+  background-position: 7px -403px;
+}
+.settings .form-section.account .right .inputs.password input,
+.settings .form-section.account .right .inputs.password2 input {
+  background-position: 7px -333px;
+}
+.settings .form-section.account .right .inputs.password input:focus,
+.settings .form-section.account .right .inputs.password2 input:focus {
+  background-position: 7px -440px;
+}
