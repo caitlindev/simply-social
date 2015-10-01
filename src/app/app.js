@@ -1,17 +1,17 @@
-angular.module( 'ngSoloists', [
+angular.module( 'ngSimplySocial', [
   'ui.utils',
   'ui.router',
   'ui.bootstrap',
   'templates-app',
   'templates-common',
-  'ngSoloists.settings',
-  'ngSoloists.home',
-  'ngSoloists.header',
-  'ngSoloists.footer',
-  'ngSoloists.hero',
-  'ngSoloists.mainNav',
-  'ngSoloists.createPost',
-  'ngSoloists.userService',
+  'ngSimplySocial.settings',
+  'ngSimplySocial.home',
+  'ngSimplySocial.header',
+  'ngSimplySocial.footer',
+  'ngSimplySocial.hero',
+  'ngSimplySocial.mainNav',
+  'ngSimplySocial.createPost',
+  'ngSimplySocial.userService',
   'wu.masonry',
   'ng.shims.placeholder'
 ])

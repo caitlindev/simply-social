@@ -1,4 +1,4 @@
-angular.module('ngSoloists.header', [])
+angular.module('ngSimplySocial.header', [])
 
 .directive("ssHeader", function($modal) {
 	return {

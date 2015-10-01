@@ -1,4 +1,4 @@
-angular.module( 'ngSoloists.createPost', [])
+angular.module( 'ngSimplySocial.createPost', [])
 
 
 .controller( 'CreatePostCtrl', function CreatePostController($scope, $modalInstance) {

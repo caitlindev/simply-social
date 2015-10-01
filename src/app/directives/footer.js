@@ -1,4 +1,4 @@
-angular.module('ngSoloists.footer', [])
+angular.module('ngSimplySocial.footer', [])
 
 .directive("ssFooter", function($modal) {
 	return {

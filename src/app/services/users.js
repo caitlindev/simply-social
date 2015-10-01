@@ -1,4 +1,4 @@
-angular.module('ngSoloists.userService', [])
+angular.module('ngSimplySocial.userService', [])
 
 .factory('UserService', ['$http', function($http) {
 

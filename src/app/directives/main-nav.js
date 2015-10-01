@@ -1,4 +1,4 @@
-angular.module('ngSoloists.mainNav', [])
+angular.module('ngSimplySocial.mainNav', [])
 
 .directive("ssMainNav", function() {
 	return {

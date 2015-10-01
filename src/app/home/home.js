@@ -1,4 +1,4 @@
-angular.module( 'ngSoloists.home', ['ngSanitize'])
+angular.module( 'ngSimplySocial.home', ['ngSanitize'])
 
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'home', {

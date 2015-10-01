@@ -1,4 +1,4 @@
-angular.module('ngSoloists.hero', [])
+angular.module('ngSimplySocial.hero', [])
 
 .directive("ssHero", function() {
 	return {

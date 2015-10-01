@@ -1,4 +1,4 @@
-angular.module( 'ngSoloists.settings', ['ngSanitize'])
+angular.module( 'ngSimplySocial.settings', ['ngSanitize'])
 
 .config(function config( $stateProvider, $urlRouterProvider ) {
   $stateProvider.state( 'settings', {
