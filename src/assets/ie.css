@@ -13,6 +13,16 @@ header .right-container .btn-comments {
     background-size: 960px 560px;
 }
 
+@media screen and (max-width:40em) {
+    header .right-container .btn-comments {
+        background-color: #262728 !important;
+        background-image: url('logo.png');
+        background-size: 960px 560px;
+        background-position: 9px -24px;
+        background-repeat: no-repeat;
+    }
+}
+
 
 header .right-container form .btn-search {
     background: url('logo.png') 0 -70px no-repeat;
@@ -96,10 +106,6 @@ ul.list-container li.list-item .right .post-actions .icon-like {
 
 
 
-
-
-
-
 .settings .form-section.account .right .inputs input {
   background: url('logo.png') 7px -262px no-repeat;
   background-size: 960px 560px;
@@ -125,3 +131,5 @@ ul.list-container li.list-item .right .post-actions .icon-like {
 .settings .form-section.account .right .inputs.password2 input:focus {
   background-position: 7px -440px;
 }
+
+
