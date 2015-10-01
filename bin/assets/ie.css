@@ -1,0 +1,135 @@
+input {
+    line-height: 1 !important;
+}
+
+header h1#logo {
+    background: url('logo.png') 0 0 no-repeat;
+    background-size: 960px 560px;
+}
+
+
+header .right-container .btn-comments {
+    background: url('logo.png') 0 -35px no-repeat;
+    background-size: 960px 560px;
+}
+
+@media screen and (max-width:40em) {
+    header .right-container .btn-comments {
+        background-color: #262728 !important;
+        background-image: url('logo.png');
+        background-size: 960px 560px;
+        background-position: 9px -24px;
+        background-repeat: no-repeat;
+    }
+}
+
+
+header .right-container form .btn-search {
+    background: url('logo.png') 0 -70px no-repeat;
+    background-size: 960px 560px;
+}
+
+.btn-add-photo i {
+    background: url('logo.png') 0 -97px no-repeat;
+    background-size: 960px 560px;
+}
+
+.btn-add-video i {
+    background: url('logo.png') 0 -121px no-repeat;
+    background-size: 960px 560px;
+}
+
+
+
+
+nav .sort-btns-container a i.icon-list {
+    background: url('logo.png') 0 -163px no-repeat;
+    background-size: 960px 560px;
+}
+
+nav .sort-btns-container a i.icon-grid {
+    background: url('logo.png') 0 -144px no-repeat;
+    background-size: 960px 560px;
+}
+
+
+
+.create-post-container form .btn-add-photo i {
+    background: url('logo.png') -20px -97px no-repeat;
+    background-size: 960px 560px;
+}
+
+.create-post-container form .btn-add-video i {
+    background: url('logo.png') -20px -121px no-repeat;
+    background-size: 960px 560px;
+}
+
+
+
+
+
+ul.list-container li.list-item .right .post-actions .icon-reply {
+    background: url('logo.png') 0 -186px no-repeat;
+    background-size: 960px 560px;
+}
+
+ul.list-container li.list-item .right .post-actions .icon-like {
+    background: url('logo.png') 0 -209px no-repeat;
+    background-size: 960px 560px;
+}
+
+
+
+
+
+
+.settings .form-section.notifications .form-group .toggle-container i.active {
+    background: url('logo.png') 0 -485px no-repeat;
+    background-size: 960px 560px;
+}
+
+.settings .form-section.notifications .form-group .toggle-container i.inactive {
+    background: url('logo.png') -51px -485px no-repeat;
+    background-size: 960px 560px;
+}
+
+
+
+
+
+.modal .modal-content .btn-close {
+    background: url('logo.png') 0 -231px no-repeat;
+    background-size: 960px 560px;
+}
+
+
+
+
+
+.settings .form-section.account .right .inputs input {
+  background: url('logo.png') 7px -262px no-repeat;
+  background-size: 960px 560px;
+}
+
+.settings .form-section.account .right .inputs.name input {
+  background-position: 7px -262px;
+}
+.settings .form-section.account .right .inputs.name input:focus {
+  background-position: 7px -369px;
+}
+.settings .form-section.account .right .inputs.email input {
+  background-position: 7px -296px;
+}
+.settings .form-section.account .right .inputs.email input:focus {
+  background-position: 7px -403px;
+}
+.settings .form-section.account .right .inputs.password input,
+.settings .form-section.account .right .inputs.password2 input {
+  background-position: 7px -333px;
+}
+.settings .form-section.account .right .inputs.password input:focus,
+.settings .form-section.account .right .inputs.password2 input:focus {
+  background-position: 7px -440px;
+}
+
+
