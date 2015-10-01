@@ -36,7 +36,7 @@
     <![endif]-->
 
     <script>
-    if ($.browser.msie && $.browser.version == 10) {
+    if (navigator.appVersion.indexOf('MSIE 10.0') > -1) {
         var cssLink = $('<link rel="stylesheet" type="text/css" href="assets/ie.css" />');
         $("head").append(cssLink);
     }
