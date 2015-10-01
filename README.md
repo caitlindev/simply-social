@@ -4,7 +4,7 @@ TO RUN:
 
 OR I have included the compiled app for production so you can just open that without having to run anything. Open the index file within the `bin` directory.
 
-***I have included the dependencies in the repo instead of having to install them based on the package.json and bower.json. Normally I would do this properly, but I wanted to ensure no issues with conflict dependency version and what not.
+* DO NOT `npm install` or `bower install`. I have included the dependencies in the repo instead of having to install them based on the package.json and bower.json. Normally I would do this properly, but I wanted to ensure no issues with conflict dependency version and what not.*
 
 
 Is both responsive and compatible back to IE9.
