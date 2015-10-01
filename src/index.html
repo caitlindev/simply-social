@@ -31,7 +31,16 @@
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
 
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="assets/ie.css" />
+    <![endif]-->
 
+    <script>
+    if ($.browser.msie && $.browser.version == 10) {
+        var cssLink = $('<link rel="stylesheet" type="text/css" href="assets/ie.css" />');
+        $("head").append(cssLink);
+    }
+    </script>
 
   </head>
   <body>

@@ -13,6 +13,7 @@
     "url": "git@github.com:ngbp/ngbp.git"
   },
   "dependencies": {
+    "angular-shims-placeholder": "^0.4.5",
     "yelp": "^0.1.1"
   },
   "devDependencies": {
